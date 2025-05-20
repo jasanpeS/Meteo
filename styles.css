@@ -15,7 +15,37 @@ label {
 
 button {
   margin-left: 0.5rem;
-  padding: 0.3rem 0.6rem;
+  padding: 0.5rem 0.8rem; /* Slightly increased padding for better click target */
+  background-color: #007bff; /* Blue background */
+  color: white; /* White text */
+  border: none; /* Remove default border */
+  border-radius: 0.25rem; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 0.9rem;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+button:disabled { /* Style for disabled button */
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+}
+
+input[type="number"] {
+  padding: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+}
+
+/* Focus Styles */
+button:focus,
+input[type="number"]:focus {
+  outline: 2px solid #0056b3; /* A distinct blue outline */
+  outline-offset: 2px; /* Offset to not overlap the element itself */
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); /* Optional: softer glow for some browsers */
 }
 
 section {
@@ -40,4 +70,19 @@ td {
 
 h1, h2 {
   margin-top: 0;
+}
+
+.error-message {
+  color: #D8000C; /* Red text */
+  background-color: #FFD2D2; /* Light red background */
+  border: 1px solid #D8000C;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border-radius: 0.3rem;
+  display: none; /* Hidden by default */
+}
+
+.error-message p { /* Style for paragraphs inside the error container */
+  margin: 0;
+  padding: 0;
 }

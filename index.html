@@ -10,18 +10,26 @@
   <div id="app">
     <h1>Dashboard Clima y Calidad del Aire</h1>
     <div id="location-input">
-      <label>Latitud: <input type="number" id="lat" step="0.0001" /></label>
-      <label>Longitud: <input type="number" id="lon" step="0.0001" /></label>
+      <label for="lat">Latitud:</label> 
+      <input type="number" id="lat" step="0.0001" aria-label="Latitud" aria-describedby="error-message-container" aria-invalid="false" />
+      
+      <label for="lon">Longitud:</label> 
+      <input type="number" id="lon" step="0.0001" aria-label="Longitud" aria-describedby="error-message-container" aria-invalid="false" />
+      
       <button id="btnFetch">Obtener Datos</button>
       <button id="btnGeo">Usar Geolocalización</button>
     </div>
-    <section id="weather-section">
+
+    <div id="error-message-container" class="error-message" role="status" aria-live="assertive"></div>
+    
+    <section id="weather-section" role="region" aria-label="Datos del Pronóstico Meteorológico" aria-live="polite">
       <h2>Pronóstico Meteorológico (24 horas)</h2>
       <table id="weather-table">
         <!-- Se llenará dinámicamente -->
       </table>
     </section>
-    <section id="air-section">
+    
+    <section id="air-section" role="region" aria-label="Datos de Calidad del Aire" aria-live="polite">
       <h2>Calidad del Aire</h2>
       <div id="air-info">
         <!-- Se llenará dinámicamente -->

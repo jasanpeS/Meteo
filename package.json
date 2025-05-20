@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "assert": "^2.1.0",
     "playwright": "^1.52.0"
   }
 }
