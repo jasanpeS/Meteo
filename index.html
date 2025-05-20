@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clima y Calidad del Aire</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <h1>Dashboard Clima y Calidad del Aire</h1>
+    <div id="location-input">
+      <label>Latitud: <input type="number" id="lat" step="0.0001" /></label>
+      <label>Longitud: <input type="number" id="lon" step="0.0001" /></label>
+      <button id="btnFetch">Obtener Datos</button>
+      <button id="btnGeo">Usar Geolocalización</button>
+    </div>
+    <section id="weather-section">
+      <h2>Pronóstico Meteorológico (24 horas)</h2>
+      <table id="weather-table">
+        <!-- Se llenará dinámicamente -->
+      </table>
+    </section>
+    <section id="air-section">
+      <h2>Calidad del Aire</h2>
+      <div id="air-info">
+        <!-- Se llenará dinámicamente -->
+      </div>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
